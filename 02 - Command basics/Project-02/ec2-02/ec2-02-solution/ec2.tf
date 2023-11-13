@@ -1,6 +1,7 @@
 # Terraform Settings Block
 terraform {
-  required_version = "~> 1.0"
+  #required_version = "~> 1.0"
+   required_version = "~> 1.6.3
   required_providers {
     aws = {
         source  = "hashicorp/aws"
@@ -12,15 +13,16 @@ terraform {
 
 # Provider Block
 provider "aws" {
-  profile = "default"
-  region  = "us-west-2"
+  profile = "joe"
+  region  = "us-east-2"
 }
 
 # Resource Block
 
 resource "aws_instance" "project2ec2" {
-  ami = ""
+  ami           = "ami-089c26792dcb1fbd4"
   instance_type = "t2.micro"
+  subnet_id     = "subnet-07128464d7032ebc1"
 
   tags = {
     Name = "FirstEC2"
