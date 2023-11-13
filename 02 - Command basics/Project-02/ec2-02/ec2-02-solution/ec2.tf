@@ -1,4 +1,5 @@
- # Terraform Settings Block
+/* 
+# Terraform Settings Block
   terraform {
   #required_version = "~> 1.0"
   required_version = "~> 1.6.3"
@@ -10,10 +11,10 @@
   }
     }
   }
-
+*/
   # Provider Block
   provider "aws" {
-   profile = "joe"
+   profile = "default"
    region  = "us-east-2"
   }
 
